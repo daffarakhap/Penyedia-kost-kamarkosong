@@ -20,7 +20,7 @@ Route::get('/', [AuthController::class, 'index']);
 Route::post('/', [AuthController::class, 'login']);
 Route::get('/beranda', [AuthController::class, 'beranda']);
 Route::get('/index', [AuthController::class, 'indek']);
-Route::get('/detailkos', [AuthController::class, 'detailkos']);
+Route::get('/detailkos/{name}', [AuthController::class, 'detailkos']);
 Route::get('/daftarkosku', [AuthController::class, 'daftarkosku']);
 Route::get('/register', [AuthController::class, 'registration']);
 Route::post('/register', [AuthController::class, 'register']);

@@ -8,25 +8,25 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/KamarKosong logo pintu aja.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset('img/KamarKosong logo pintu aja.png') }}" rel="icon">
+  <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ asset('lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/magnific-popup/magnific-popup.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
   .mySlides {display:none}
@@ -51,9 +51,9 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto"><img src="img/KamarKosong logo pintu aja.png" width="50" height="50" style="margin-right: 10px;">Kamar<span>Kosong</span></a></h1>
+        <h1><a href="#body" class="scrollto"><img src="{{ asset('img/KamarKosong logo pintu aja.png') }}" width="50" height="50" style="margin-right: 10px;">Kamar<span>Kosong</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+        <!-- <a href="#body"><img src="{{ asset('img/logo.png') }}" alt="" title="" /></a>-->
         <br>
         <h1 style="font-size: 16px; margin-top: -10px;">
           <a href="{{url('')}}">Beranda </a>
@@ -77,9 +77,9 @@
   ============================-->
   <section id="" style="width:100%; height: 320px; background-color: #f4f4f4">
     <div class="w3-content w3-display-container">
-      <img class="mySlides" src="img/intro-carousel/selasar-atas-1024x768.jpg" style="width:100%; height: 300px">
-      <img class="mySlides" src="img/intro-carousel/kost jimbaran bali-16.jpg" style="width:100%; height: 300px">
-      <img class="mySlides" src="img/intro-carousel/bisnis-kos-kosan.jpg" style="width:100%; height: 300px">
+      <img class="mySlides" src="{{ Storage::url($data->image) }}" style="width:100%; height: 300px">
+      <img class="mySlides" src="{{ asset('img/intro-carousel/kost jimbaran bali-16.jpg') }}" style="width:100%; height: 300px">
+      <img class="mySlides" src="{{ asset('img/intro-carousel/bisnis-kos-kosan.jpg') }}" style="width:100%; height: 300px">
 
       <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
         <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
@@ -106,52 +106,54 @@
       var i;
       var x = document.getElementsByClassName("mySlides");
       var dots = document.getElementsByClassName("demo");
-      if (n > x.length) {slideIndex = 1}    
+      if (n > x.length) {slideIndex = 1}
       if (n < 1) {slideIndex = x.length}
       for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";  
+         x[i].style.display = "none";
       }
       for (i = 0; i < dots.length; i++) {
          dots[i].className = dots[i].className.replace(" w3-white", "");
       }
-      x[slideIndex-1].style.display = "block";  
+      x[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " w3-white";
     }
     </script>
-    
+
   </section>
 
   <section id="team" class="wow fadeInUp">
       <div class="container">
       <div class="section-header" style="font-size: 25px; text-align: center;">
-              <h2>Ril cuy kost</h2>
+              <h2>{{ $data->nama_kos }}</h2>
               <hr>
             </div>
-        <div class="row" style="padding-right: 120px; padding-left: 120px">          
+        <div class="row" style="padding-right: 120px; padding-left: 120px">
           <div class="col-lg-9 content">
-            
+
 
             <div class="padding-0 box-v4-alert">
               <p style="font-size: 16px; "><b>Fasilitas : </b><br>
-                <i class="fa fa-plug" style="padding-left: 100px"> Listrik  </i><br>
-                <i class="fa fa-lock" aria-hidden="true" style="padding-left: 100px"> Keamanan 24 Jam  </i><br>
-                <i class="fa fa-bath" aria-hidden="true" style="padding-left: 100px"> Kamar Mandi Luar  </i><br>
-                <i class="fa fa-wifi" aria-hidden="true" style="padding-left: 100px"> WiFi  </i>
+                @php
+                    $fasilitas = explode(',', $data->fasilitas);
+                @endphp
+                @foreach ($fasilitas as $f)
+                <i style="padding-left: 100px">{{ $f }}</i><br>
+                @endforeach
               </p>
 
-              <p style="font-size: 16px; "><b>Luas Kamar : </b>3x3 meter</p>
-              <p style="font-size: 16px; "><b>Keterangan Biaya Lain : </b> Sudah termasuk listrik </p>
-              
+              <p style="font-size: 16px; "><b>Luas Kamar : </b>{{ $data->luas_kamar }}</p>
+              <p style="font-size: 16px; "><b>Keterangan Biaya Lain : </b> {{ $data->ket_biaya_lain }} </p>
+
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6" style="background-color: #b5ffd6; padding: 15px; height: 330px;">
             <div class="member"  >
               <div class="details">
-                <h4 style="font-size: 35px">Tersedia<br>9 Kamar</h4>
+                <h4 style="font-size: 35px">Tersedia<br>{{ $data->jumlah }} Kamar</h4>
                 <hr>
-                <span style="font-size: 15px"><b>Rp 12.000.000 / bulan</b></span>
-                <span>Jl. Menggerhilir no 99</span>
+                <span style="font-size: 15px"><b>Rp. {{ number_format($data->harga,0,",",".") }} / bulan</b></span>
+                <span>{{ $data->alamat }}</span>
               </div>
             </div>
 
@@ -171,7 +173,7 @@
             </div>
             </a> -->
 
-            
+
 
             <a href="" class="btn-get-started scrollto" style="color: #ffffff">
             <div class="" style="background-color: #2e4ca5; height: 35px; border-radius: 3px; text-align: center; font-size: 16px; padding-top: 5px; margin-top: 10px">
@@ -179,7 +181,7 @@
             </div>
             </a>
 
-            
+
 
           </div>
         </div>
@@ -190,7 +192,7 @@
     <hr>
 
     <section id="portfolio" class="wow fadeInUp" style="background-color: #f4f4f4">
-    
+
     <div class="col-md-12">
 
       <div class="container">
@@ -205,10 +207,10 @@
           <div class="col-lg-3 col-md-3" style="padding: 10px">
             <div class="portfolio-item wow fadeInUp">
               <a href="{{url('detailkos')}}" class="" >
-                <img src="img/kost/batununggal.jpg" alt="">
+                <img src="{{ asset('img/kost/batununggal.jpg') }}" alt="">
                 <div class="portfolio-overlay">
                   <div class="portfolio-info"><h2 class="wow fadeInUp">Sisa 2 Kamar</h2></div>
-                  
+
                   <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 160px; opacity: 0.8;">
                     <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Batununggal</span></h2>
                   </div>
@@ -221,7 +223,7 @@
           <div class="col-lg-3 col-md-3" style="padding: 10px">
             <div class="portfolio-item wow fadeInUp">
               <a href="{{url('detailkos')}}" class="" >
-                <img src="img/kost/sukapura.jpg" alt="">
+                <img src="{{ asset('img/kost/sukapura.jpg') }}" alt="">
                 <div class="portfolio-overlay">
                   <div class="portfolio-info"><h2 class="wow fadeInUp">Sisa 4 Kamar</h2></div>
 
@@ -237,7 +239,7 @@
           <div class="col-lg-3 col-md-3" style="padding: 10px">
             <div class="portfolio-item wow fadeInUp">
               <a href="{{url('detailkos')}}" class="" >
-                <img src="img/kost/cikoneng.jpg" alt="">
+                <img src="{{ asset('img/kost/cikoneng.jpg') }}" alt="">
                 <div class="portfolio-overlay">
                   <div class="portfolio-info"><h2 class="wow fadeInUp">Sisa 6 Kamar</h2></div>
 
@@ -253,7 +255,7 @@
           <div class="col-lg-3 col-md-3" style="padding: 10px">
             <div class="portfolio-item wow fadeInUp">
               <a href="{{url('detailkos')}}" class="" >
-                <img src="img/kost/ciganitri.jpg" alt="">
+                <img src="{{ asset('img/kost/ciganitri.jpg') }}" alt="">
                 <div class="portfolio-overlay">
                   <div class="portfolio-info"><h2 class="wow fadeInUp">Sisa 1 Kamar</h2></div>
 
@@ -267,15 +269,15 @@
           </div>
         </div>
       </div>
-      
+
     </div>
-    
+
     </section><!-- #portfolio -->
 
     <!--==========================
       Clients Section
     ============================-->
-    
+
   <!--==========================
     Footer
   ============================-->
@@ -291,7 +293,7 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
         -->
-        
+
       </div>
     </div>
   </footer><!-- #footer -->
@@ -299,22 +301,22 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="lib/sticky/sticky.js"></script>
+  <script src="{{ asset('lib/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('lib/jquery/jquery-migrate.min.js') }}"></script>
+  <script src="{{ asset('lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
+  <script src="{{ asset('lib/superfish/hoverIntent.js') }}"></script>
+  <script src="{{ asset('lib/superfish/superfish.min.js') }}"></script>
+  <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
+  <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('lib/magnific-popup/magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('lib/sticky/sticky.js') }}"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="{{ asset('contactform/contactform.js') }}"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
 
 </body>
 </html>

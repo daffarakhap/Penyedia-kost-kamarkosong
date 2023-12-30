@@ -90,8 +90,9 @@ class AuthController extends Controller
         return view('User.hasilcariberanda', compact('data'));
     }
 
-    public function detailkos(){
-        return view('User.detailkos');
+    public function detailkos($name){
+        $data = Kosan::where('nama_kos', $name)->first();
+        return view('User.detailkos', compact('data'));
     }
 
     public function daftarkosku(){

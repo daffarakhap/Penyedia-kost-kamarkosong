@@ -233,7 +233,7 @@
                                     @foreach ($data as $d)
                                     <div class="col-lg-4 col-md-3 mb-4">
                                     <div class="portfolio-item wow fadeInUp">
-                                        <a href="{{url('detailkos')}}" class="" >
+                                        <a href="{{url('detailkos/'.$d->nama_kos)}}" class="" >
                                         <img src="{{ Storage::url($d->image) }}" alt="">
                                         <div class="portfolio-overlay">
                                             <div class="portfolio-info"><h2 class="wow fadeInUp"> Sisa {{ $d->jumlah }} Kamar</h2></div>
