@@ -22,7 +22,7 @@ class KosanController extends Controller
             'image' => $request->file('image')->store('public/post-images'),
 
         ]);
-        return redirect('datfarkosku');
+        return redirect('daftarkosku');
 
     }
 }

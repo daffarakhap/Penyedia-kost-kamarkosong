@@ -108,8 +108,24 @@
       </div>
       <div class="container-fluid">
         <div class="row no-gutters">
+            @foreach($kosans as $Kosan)
+            <div class="col-lg-4 col-md-4" style="padding: 10px">
+            <div class="portfolio-item wow fadeInUp">
+              <a href="{{url('detailkos')}}" class="" >
+                <img src="{{ asset('storage/' . $Kosan->image ) }}" alt="">
+                <div class="portfolio-overlay">
+                  <div class="portfolio-info"><h2 class="wow fadeInUp"> Sisa {{ $Kosan->jumlah }} Kamar</h2></div>
+                  
+                  <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 180px; opacity: 0.8;">
+                    <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">{{ $Kosan->alamat }}</span></h2>
+                  </div>
 
-          <div class="col-lg-3 col-md-3" style="padding: 10px">
+                </div>
+              </a>
+            </div>
+          </div>
+            @endforeach
+          <!-- <div class="col-lg-3 col-md-3" style="padding: 10px">
             <div class="portfolio-item wow fadeInUp">
               <a href="{{url('detailkos')}}" class="" >
                 <img src="img/kost/sukabirus.jpg" alt="">
@@ -235,7 +251,7 @@
                 </div>
               </a>
             </div>
-          </div>
+          </div> -->
 
         </div>
 

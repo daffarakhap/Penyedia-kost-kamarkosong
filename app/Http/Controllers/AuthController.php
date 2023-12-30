@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kosan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Kosan;
 
 class AuthController extends Controller
 {
@@ -14,7 +14,8 @@ class AuthController extends Controller
     }
 
     public function beranda(){
-        return view('User.beranda');
+        $kosans = Kosan::all();
+        return view('User.beranda',['kosans' => $kosans]);
     }
 
     public function indek(){
