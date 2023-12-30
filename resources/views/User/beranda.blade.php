@@ -108,7 +108,19 @@
       </div>
       <div class="container-fluid">
         <div class="row no-gutters">
-
+            <!-- @foreach($kosans as $kosan)
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+              <div class="col">
+                 <div class="card">
+                    <img src="{{ asset('storage/' . $kosan->image )}}" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ $kosan->nama_kos }}</h5>
+                      <p class="card-text">{{ $kosan->alamat }}</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            @endforeach -->
           <div class="col-lg-3 col-md-3" style="padding: 10px">
             <div class="portfolio-item wow fadeInUp">
               <a href="{{url('detailkos')}}" class="" >
