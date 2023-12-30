@@ -79,7 +79,7 @@
   <!--==========================
     Intro Section
   ============================-->
-  <section id="intro" style="height: 300px">
+  <section id="intro" style="height: 4  00px">
     
     <div class="container" >
       <div class="intro-content">
@@ -229,23 +229,28 @@
                         <section id="portfolio" class="wow fadeInUp" >
                           <div class="row">
                             <!-- <div class="row"> -->
+                            @foreach($kosans as $Kosan)
                               <div class="col-lg-4 col-md-3" style="padding-bottom: 25px">
                                 <div class="portfolio-item wow fadeInUp">
                                   <a href="{{url('detailkos')}}" class="" >
-                                    <img src="img/kost/baleendah.jpg" alt="">
+                                    <img src="{{ asset('storage/' . $Kosan->image ) }}" alt="">
                                     <div class="portfolio-overlay">
-                                      <div class="portfolio-info"><h2 class="wow fadeInUp">Sisa 2 Kamar</h2></div>
+                                      <div class="portfolio-info"><h2 class="wow fadeInUp">Sisa {{ $Kosan->jumlah }} Kamar</h2></div>
                                       
                                       <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 150px; opacity: 0.8;">
-                                        <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Sukabirus</span></h2>
+                                        <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">{{ $Kosan->alamat }}</span></h2>
                                       </div>
 
                                     </div>
                                   </a>
                                 </div>
                               </div>
-
-                              <div class="col-lg-4 col-md-3">
+                              @endforeach
+                          </div>
+                        </section>
+                    </div>
+                </div>
+                              <!-- <div class="col-lg-4 col-md-3">
                                 <div class="portfolio-item wow fadeInUp">
                                   <a href="{{url('detailkos')}}" class="" >
                                     <img src="img/kost/sukabirus.jpg" alt="" style="opacity: 0.3">
@@ -318,7 +323,7 @@
                                     </div>
                                   </a>
                                 </div>
-                              </div>
+                              </div> -->
 
                               
                             <!-- </div>  -->

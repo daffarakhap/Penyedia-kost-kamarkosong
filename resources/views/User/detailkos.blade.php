@@ -124,7 +124,7 @@
   <section id="team" class="wow fadeInUp">
       <div class="container">
       <div class="section-header" style="font-size: 25px; text-align: center;">
-              <h2>Ril cuy kost</h2>
+              <h2>{{ $Kosan->nama_kos }}</h2>
               <hr>
             </div>
         <div class="row" style="padding-right: 120px; padding-left: 120px">          
@@ -139,8 +139,8 @@
                 <i class="fa fa-wifi" aria-hidden="true" style="padding-left: 100px"> WiFi  </i>
               </p>
 
-              <p style="font-size: 16px; "><b>Luas Kamar : </b>3x3 meter</p>
-              <p style="font-size: 16px; "><b>Keterangan Biaya Lain : </b> Sudah termasuk listrik </p>
+              <p style="font-size: 16px; "><b>Luas Kamar : </b>{{ $Kosan->luas_kamar }}</p>
+              <p style="font-size: 16px; "><b>Keterangan Biaya Lain : </b> {{ $Kosan->ket_biaya_lain }} </p>
               
             </div>
           </div>
@@ -148,10 +148,10 @@
           <div class="col-lg-3 col-md-6" style="background-color: #b5ffd6; padding: 15px; height: 330px;">
             <div class="member"  >
               <div class="details">
-                <h4 style="font-size: 35px">Tersedia<br>9 Kamar</h4>
+                <h4 style="font-size: 35px">Tersedia<br>{{ $Kosan->jumlah }} Kamar</h4>
                 <hr>
-                <span style="font-size: 15px"><b>Rp 12.000.000 / bulan</b></span>
-                <span>Jl. Menggerhilir no 99</span>
+                <span style="font-size: 15px"><b>{{ $Kosan->harga }}/ bulan</b></span>
+                <span>{{ $Kosan->alamat }}</span>
               </div>
             </div>
 
