@@ -8,35 +8,35 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/KamarKosong logo pintu aja.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset('img/KamarKosong logo pintu aja.png') }}" rel="icon">
+  <link href="{{ asset('img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{ asset('lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/magnific-popup/magnific-popup.css') }}" rel="stylesheet">
+  <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
   <!-- start: Css -->
-    <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/bootstrap.min.css') }}">
 
       <!-- plugins -->
-      <link rel="stylesheet" type="text/css" href="asset/css/plugins/font-awesome.min.css"/>
-      <link rel="stylesheet" type="text/css" href="asset/css/plugins/simple-line-icons.css"/>
-      <link rel="stylesheet" type="text/css" href="asset/css/plugins/animate.min.css"/>
-      <link rel="stylesheet" type="text/css" href="asset/css/plugins/fullcalendar.min.css"/>
-    <link href="asset/css/style.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/plugins/font-awesome.min.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/plugins/simple-line-icons.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/plugins/animate.min.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ asset('asset/css/plugins/fullcalendar.min.css') }}"/>
+    <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet">
   <!-- end: Css -->
 
   <!-- =======================================================
@@ -56,7 +56,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto"><img src="img/KamarKosong logo pintu aja.png" width="50" height="50" style="margin-right: 10px;">Kamar<span>Kosong</span></a></h1>
+        <h1><a href="#body" class="scrollto"><img src="{{ asset('img/KamarKosong logo pintu aja.png') }}" width="50" height="50" style="margin-right: 10px;">Kamar<span>Kosong</span></a></h1>
         <br>
         <h1 style="font-size: 16px; margin-top: -10px;">
           <a href="beranda.html">Beranda </a>
@@ -82,7 +82,7 @@
     Intro Section
   ============================-->
   <section id="intro" style="height: 300px">
-    
+
     <div class="container" >
       <div class="intro-content">
         <!-- <h2>Kamu membutuhkan <span>kos?</span><br><span>Temukan</span> sekarang!</h2> -->
@@ -102,7 +102,7 @@
                   </datalist>
               </div>
             </div>
-            
+
             <div>
             <!-- <a href="#" class="btn-projects scrollto">Get Started</a> -->
               <!-- <a href="#" class="btn-get-started scrollto">Search</a> -->
@@ -203,19 +203,19 @@
                           <input type="checkbox" name="vehicle" value="Bike"> WiFi<br>
                         </div>
                         </p>
-                       
+
                         <hr>
                         <div style="text-align: right;">
                           <a href="hasilfilter.html"><button class="btn-get-started" type="submit" style="font-size: 16px; background-color: #e2e2e2; color: #000000"><b>Cari</b></button></a>
                         </div>
-                      
-                      </div>
-                  </div>  
-                        
 
-                  
+                      </div>
+                  </div>
+
+
+
                 </div>
-            </div> 
+            </div>
           </div>
 
           <div class="col-md-9 scrollable">
@@ -237,7 +237,7 @@
                                     <img src="img/portfolio/c.jpg" alt="">
                                     <div class="portfolio-overlay">
                                       <div class="portfolio-info"><h2 class="wow fadeInUp">Sisa 2 Kamar</h2></div>
-                                      
+
                                       <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 170px; opacity: 0.8;">
                                         <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Alamat Kos</span></h2>
                                       </div>
@@ -253,7 +253,7 @@
                                     <img src="img/portfolio/c.jpg" alt="" style="opacity: 0.3">
                                     <div class="portfolio-overlay" >
                                       <div class="portfolio-info"><h2 class="wow fadeInUp" style="color: #b70707">Penuh</h2></div>
-                                      
+
                                       <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 170px; opacity: 0.8;">
                                         <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Alamat Kos</span></h2>
                                       </div>
@@ -268,7 +268,7 @@
                                     <img src="img/portfolio/c.jpg" alt="">
                                     <div class="portfolio-overlay">
                                       <div class="portfolio-info"><h2 class="wow fadeInUp" >Sisa 1 Kamar</h2></div>
-                                      
+
                                       <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 170px; opacity: 0.8;">
                                         <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Alamat Kos</span></h2>
                                       </div>
@@ -283,7 +283,7 @@
                                     <img src="img/portfolio/c.jpg" alt="">
                                     <div class="portfolio-overlay">
                                       <div class="portfolio-info"><h2 class="wow fadeInUp" >Sisa 4 Kamar</h2></div>
-                                      
+
                                       <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 170px; opacity: 0.8;">
                                         <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Alamat Kos</span></h2>
                                       </div>
@@ -291,14 +291,14 @@
                                   </a>
                                 </div>
                               </div>
-                        
+
                               <div class="col-lg-4 col-md-3">
                                 <div class="portfolio-item wow fadeInUp">
                                   <a href="detailkos_hasilpencarian.html" class="" >
                                     <img src="img/portfolio/c.jpg" alt="">
                                     <div class="portfolio-overlay">
                                       <div class="portfolio-info"><h2 class="wow fadeInUp" >Sisa 2 Kamar</h2></div>
-                                      
+
                                       <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 170px; opacity: 0.8;">
                                         <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Alamat Kos</span></h2>
                                       </div>
@@ -313,7 +313,7 @@
                                     <img src="img/portfolio/c.jpg" alt="" style="opacity: 0.3">
                                     <div class="portfolio-overlay">
                                       <div class="portfolio-info"><h2 class="wow fadeInUp" style="color: #b70707">Penuh</h2></div>
-                                      
+
                                       <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 170px; opacity: 0.8;">
                                         <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Alamat Kos</span></h2>
                                       </div>
@@ -322,14 +322,14 @@
                                 </div>
                               </div>
 
-                              
+
                             <!-- </div>  -->
 
                           </div>
                         </section><!-- #portfolio -->
                     </div>
                 </div>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
@@ -340,7 +340,7 @@
     <!--==========================
       Clients Section
     ============================-->
-    
+
   <!--==========================
     Footer
   ============================-->
@@ -366,22 +366,22 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="lib/sticky/sticky.js"></script>
+  <script src="{{ asset('lib/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('lib/jquery/jquery-migrate.min.js') }}"></script>
+  <script src="{{ asset('lib/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
+  <script src="{{ asset('lib/superfish/hoverIntent.js') }}"></script>
+  <script src="{{ asset('lib/superfish/superfish.min.js') }}"></script>
+  <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
+  <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('lib/magnific-popup/magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('lib/sticky/sticky.js') }}"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
   <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+  <script src="{{ asset('contactform/contactform.js') }}"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
 
 </body>
 </html>

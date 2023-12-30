@@ -19,10 +19,10 @@ class KosanController extends Controller
             'NoWa' => $request->NoWa,
             'jumlah' => $request->jumlah,
             'harga' => $request->harga,
-            'image' => $request->file('image')->store('post-images'),
-            
+            'image' => $request->file('image')->store('public/post-images'),
+
         ]);
         return redirect('datfarkosku');
-        
+
     }
 }

@@ -80,15 +80,15 @@
     Intro Section
   ============================-->
   <section id="intro" style="height: 300px">
-    
+
     <div class="container" >
       <div class="intro-content">
         <!-- <h2>Kamu membutuhkan <span>kos?</span><br><span>Temukan</span> sekarang!</h2> -->
         <div class="container" >
-          <form action="" method="post" role="form" class="contactForm">
+          <form action="{{ url('hasilcariberanda') }}" method="GET">
             <div class="form-row">
               <div class="form-group col-md-10" style="padding-left: 185px">
-                <input style="text-align: center; height: 50px; font-size: 20px"  type="text" name="name" class="form-control" id="name" value="Sukabirus" data-rule="minlen:1" data-msg="Please enter the address" list="wilayah" />
+                <input style="text-align: center; height: 50px; font-size: 20px" type="text" name="keyword" class="form-control" id="keyword" value="Sukabirus" data-rule="minlen:1" data-msg="Please enter the address" list="wilayah" />
                   <datalist id="wilayah">
                     <option>Sukabirus</option>
                     <option>Sukapura</option>
@@ -100,11 +100,11 @@
                   </datalist>
               </div>
             </div>
-            
+
             <div>
             <!-- <a href="#" class="btn-projects scrollto">Get Started</a> -->
               <!-- <a href="#" class="btn-get-started scrollto">Search</a> -->
-              <a class="btn-get-started scrollto">Cari</a>
+              <button type="submit" class="btn-get-started scrollto">Cari</button>
             </div>
             <!-- <div class="text-center"><button type="submit">Send Message</button></div> -->
           </form>
@@ -201,19 +201,19 @@
                           <input type="checkbox" name="vehicle" value="Bike"> WiFi<br>
                         </div>
                         </p>
-                       
+
                         <hr>
                         <div style="text-align: right;">
                           <a href="{{url('hasilfilter')}}"><button class="btn-get-started" type="submit" style="font-size: 16px; background-color: #e2e2e2; color: #000000"><b>Cari</b></button></a>
                         </div>
-                      
+
                       </div>
                   </div>   -->
-                        
 
-                  
+
+
                 </div>
-            </div> 
+            </div>
           </div>
 
           <div class="col-md-12 scrollable">
@@ -229,105 +229,36 @@
                         <section id="portfolio" class="wow fadeInUp" >
                           <div class="row">
                             <!-- <div class="row"> -->
-                              <div class="col-lg-4 col-md-3" style="padding-bottom: 25px">
-                                <div class="portfolio-item wow fadeInUp">
-                                  <a href="{{url('detailkos')}}" class="" >
-                                    <img src="img/kost/baleendah.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                      <div class="portfolio-info"><h2 class="wow fadeInUp">Sisa 2 Kamar</h2></div>
-                                      
-                                      <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 150px; opacity: 0.8;">
-                                        <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Sukabirus</span></h2>
-                                      </div>
+                                @if (count($data) > 0)
+                                    @foreach ($data as $d)
+                                    <div class="col-lg-4 col-md-3 mb-4">
+                                    <div class="portfolio-item wow fadeInUp">
+                                        <a href="{{url('detailkos')}}" class="" >
+                                        <img src="{{ Storage::url($d->image) }}" alt="">
+                                        <div class="portfolio-overlay">
+                                            <div class="portfolio-info"><h2 class="wow fadeInUp"> Sisa {{ $d->jumlah }} Kamar</h2></div>
 
-                                    </div>
-                                  </a>
-                                </div>
-                              </div>
+                                            <div class="pt-3 pb-3" style="background-color: #f9f9f9; position: absolute; bottom: 0; width: 100%; opacity: 0.8;">
+                                            <h2><span style="text-align: center; font-size: 20px; color: #000000">{{ $d->alamat }}</span></h2>
+                                            </div>
 
-                              <div class="col-lg-4 col-md-3">
-                                <div class="portfolio-item wow fadeInUp">
-                                  <a href="{{url('detailkos')}}" class="" >
-                                    <img src="img/kost/sukabirus.jpg" alt="" style="opacity: 0.3">
-                                    <div class="portfolio-overlay" >
-                                      <div class="portfolio-info"><h2 class="wow fadeInUp" style="color: #b70707">Penuh</h2></div>
-                                      
-                                      <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 150px; opacity: 0.8;">
-                                        <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Sukapura</span></h2>
-                                      </div>
+                                        </div>
+                                        </a>
                                     </div>
-                                  </a>
-                                </div>
-                              </div>
-
-                              <div class="col-lg-4 col-md-3">
-                                <div class="portfolio-item wow fadeInUp">
-                                  <a href="{{url('detailkos')}}" class="" >
-                                    <img src="img/kost/ciganitri.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                      <div class="portfolio-info"><h2 class="wow fadeInUp" >Sisa 1 Kamar</h2></div>
-                                      
-                                      <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 150px; opacity: 0.8;">
-                                        <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Baleendah</span></h2>
-                                      </div>
                                     </div>
-                                  </a>
+                                    @endforeach
+                                @else
+                                <div class="col-12 text-center">
+                                    <h3>Data Tidak Ditemukan</h3>
                                 </div>
-                              </div>
-
-                              <div class="col-lg-4 col-md-3">
-                                <div class="portfolio-item wow fadeInUp">
-                                  <a href="{{url('detailkos')}}" class="" >
-                                    <img src="img/kost/cikoneng.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                      <div class="portfolio-info"><h2 class="wow fadeInUp" >Sisa 4 Kamar</h2></div>
-                                      
-                                      <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 150px; opacity: 0.8;">
-                                        <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Ciganitri</span></h2>
-                                      </div>
-                                    </div>
-                                  </a>
-                                </div>
-                              </div>
-                        
-                              <div class="col-lg-4 col-md-3">
-                                <div class="portfolio-item wow fadeInUp">
-                                  <a href="{{url('detailkos')}}" class="" >
-                                    <img src="img/kost/kopo.jpg" alt="">
-                                    <div class="portfolio-overlay">
-                                      <div class="portfolio-info"><h2 class="wow fadeInUp" >Sisa 2 Kamar</h2></div>
-                                      
-                                      <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 150px; opacity: 0.8;">
-                                        <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Batununggal</span></h2>
-                                      </div>
-                                    </div>
-                                  </a>
-                                </div>
-                              </div>
-
-                              <div class="col-lg-4 col-md-3">
-                                <div class="portfolio-item wow fadeInUp">
-                                  <a href="{{url('detailkos')}}" class="" >
-                                    <img src="img/kost/dayeuhkolot.jpg" alt="" style="opacity: 0.3">
-                                    <div class="portfolio-overlay">
-                                      <div class="portfolio-info"><h2 class="wow fadeInUp" style="color: #b70707">Penuh</h2></div>
-                                      
-                                      <div class="" style="background-color: #f9f9f9; height: 55px; margin-top: 150px; opacity: 0.8;">
-                                        <h2 ><span style="margin-top: 190px; text-align: center; font-size: 20px; color: #000000">Dayeuhkolot</span></h2>
-                                      </div>
-                                    </div>
-                                  </a>
-                                </div>
-                              </div>
-
-                              
+                                @endif
                             <!-- </div>  -->
 
                           </div>
                         </section><!-- #portfolio -->
                     </div>
                 </div>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
@@ -338,7 +269,7 @@
     <!--==========================
       Clients Section
     ============================-->
-    
+
   <!--==========================
     Footer
   ============================-->

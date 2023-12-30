@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Kosan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -26,7 +28,7 @@ class AuthController extends Controller
     public function tambahkos(){
         return view('Pemilikkost.tambahkos');
     }
-    
+
     function register(Request $request){
         $request->validate([
             'name'=>'required',
@@ -42,7 +44,7 @@ class AuthController extends Controller
             'email'=>$request->email,
             'password'=>$request->password,
             'role'=>$request->role,
-            
+
         ]);
         return redirect('/');
     }
@@ -71,14 +73,21 @@ class AuthController extends Controller
             return redirect('')->withErrors('Username / Password Salah')->withInput();
         }
     }
-    
+
     public function logout(Request $request){
         Auth::logout();
         return redirect('/');
     }
 
-    public function hasilcariberanda(){
-        return view('User.hasilcariberanda');
+    public function hasilcariberanda(Request $request){
+        if ($request->keyword) {
+            $data = Kosan::where('nama_kos', 'like', '%'.$request->keyword.'%')
+                ->orWhere('alamat', 'like', '%'.$request->keyword.'%')
+                ->get();
+        } else {
+            $data = [];
+        }
+        return view('User.hasilcariberanda', compact('data'));
     }
 
     public function detailkos(){
@@ -88,5 +97,5 @@ class AuthController extends Controller
     public function daftarkosku(){
         return view('Pemilikkost.daftarkosku');
     }
-    
+
 }
